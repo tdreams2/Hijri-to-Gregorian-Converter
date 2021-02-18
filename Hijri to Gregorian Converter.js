@@ -11,6 +11,7 @@
 // @require      https://momentjs.com/downloads/moment-with-locales.min.js
 // @require      https://raw.githubusercontent.com/xsoh/moment-hijri/master/moment-hijri.js
 // ==/UserScript==
+
 moment.locale('en-US');
 waitForKeyElements("span.f:contains('AH')", convertTimezone);
 waitForKeyElements("div.wrBvFf:contains('AH')", convertTimezone);
