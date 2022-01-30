@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Hijri to Gregorian Converter
-// @version      1.0
+// @version      2.0
 // @description  Convert Hijri to Gregorian on Google search results
 // @author       Ahmed Alahmadi
 // @license      MIT
@@ -14,9 +14,18 @@
 // ==/UserScript==
 
 moment.locale('en-US');
-waitForKeyElements("span.f:contains('AH')", convertTimezone);
-waitForKeyElements("div.wrBvFf:contains('AH')", convertTimezone);
-waitForKeyElements("div.fG8Fp.uo4vr:contains('AH')", convertTimezone);
+waitForKeyElements("span:contains(Muh.)", convertTimezone);
+waitForKeyElements("span:contains(Saf.)", convertTimezone);
+waitForKeyElements("span:contains(Rab. I)", convertTimezone);
+waitForKeyElements("span:contains(Rab. II)", convertTimezone);
+waitForKeyElements("span:contains(Jum. I)", convertTimezone);
+waitForKeyElements("span:contains(Jum. II)", convertTimezone);
+waitForKeyElements("span:contains(Raj.)", convertTimezone);
+waitForKeyElements("span:contains(Sha.)", convertTimezone);
+waitForKeyElements("span:contains(Ram.)", convertTimezone);
+waitForKeyElements("span:contains(Shaw.)", convertTimezone);
+waitForKeyElements("span:contains(Dhuʻl-Q.)", convertTimezone);
+waitForKeyElements("span:contains(Dhuʻl-H.)", convertTimezone);
 function convertTimezone(jNode) {
     var oldDate = jNode.text().substring(0, jNode.text().indexOf('AH') + 'AH'.length); //remove text after AH string
     array = oldDate.split(' ');
