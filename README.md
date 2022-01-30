@@ -28,3 +28,4 @@ __Examples:__
 
 [Tampermonkey Extension](https://www.tampermonkey.net)
 
+### This only works with English display language
